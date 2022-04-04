@@ -1,7 +1,7 @@
 :root {
     --royalblue:#0a16f3;
-
-
+    --ws:#F5F5F5; 
+    --darkline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 * {
     box-sizing:border-box;
@@ -27,7 +27,7 @@ main {
 /* Header and Nav styles start */
 header {
     padding: 1px 1px;
-    background-color: whitesmoke;
+    background-color: var (--ws);
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
@@ -39,13 +39,15 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center; 
+    text-shadow:var(--darkline);
+    
 }
 header h1 {
     font-weight: bold;
     margin: 0;
     font-size: 36px;
-    color: whitesmoke;
+    color: var (--ws);
     text-shadow: 3 3 10px rgba(0, 0, 0, 0.5);
     z-index: 9999;
 }
@@ -74,7 +76,7 @@ header nav ul li a:hover {
     background: var(--royalblue);
     color:burlywood;
     border-radius: 1vh;
-    text-shadow:whitesmoke;
+    text-shadow:var (--ws);
 }
 
 /* Hero Style Start */
@@ -86,6 +88,7 @@ header nav ul li a:hover {
     align-items: flex-start;
     background-attachment: fixed;
     background-position: 80%;
+    text-shadow:var(--darkline);
 }
 
 .hero-cta {
@@ -117,7 +120,7 @@ hero h2 {
 }
 
 #footer3 {
-    color: whitesmoke;
+    color: var (--ws);
     font-size: 20px;
     margin: 0;
 }
@@ -134,7 +137,7 @@ hero h2 {
 
 
 
-
+/* Flex Attempts */
 .flex-card {
     display:flex;
     flex-direction: row;
@@ -188,9 +191,7 @@ hero h2 {
 }
 @media screen and (max-width: 800px) {
 
-    .left,
-    .main,
-    .right {
+    .body, .hero, .main, .flex-card, .projectcards {
         width: 100%;
         /* The width is 100%, when the viewport is 800px or smaller */
     }
@@ -199,9 +200,7 @@ hero h2 {
 
 @media screen and (max-width: 500px) {
 
-    .body,
-    .main,
-    .flex-card, .projectcards {
+    .body, .hero, .main, .flex-card, .projectcards {
         width: 100%;
         
     }
